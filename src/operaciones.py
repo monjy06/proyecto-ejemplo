@@ -12,3 +12,7 @@ def dividir(a, b):
     if b == 0:
         raise ValueError("No se puede dividir entre cero.")
         return a / b
+
+def resto(a, b):
+    """Devuelve el resto."""
+    return a % b

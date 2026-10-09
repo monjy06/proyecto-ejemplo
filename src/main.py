@@ -1,4 +1,4 @@
-from operaciones import sumar, restar, multiplicar, dividir
+from operaciones import sumar, restar, multiplicar, dividir, resto
 
 
 
@@ -9,7 +9,8 @@ def mostrar_menu():
     print("2. Restar")
     print("3. Multiplicar")
     print("4. Dividir")
-    print("5. Salir")
+    print("5. Resto")
+    print("6. Salir")
 
 def pedir_numero(mensaje):
  while True:
@@ -42,8 +43,13 @@ def main():
         except ValueError as e:
             print(f"Error: {e}")
     elif opcion == "5":
-        print("Saliendo del programa...")
-        break
+        a = pedir_numero("Introduce el primer número: ")
+        b = pedir_numero("Introduce el segundo número: ")
+        print(f"Resultado: {resto(a, b)}")
+        
+    elif opcion == "6":
+            print("Saliendo del programa...")
+            break
     else:
         print("Opción no válida. Inténtalo de nuevo.")
 if __name__ == "__main__":
